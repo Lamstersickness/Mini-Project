@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            height:100vh;
+            font-family: Arial, sans-serif;
+            background-image: url("car2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        h2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    transition: color 0.3s ease; 
+}
+
+h2:hover {
+    color: navy; 
+}
+
+h3 {
+    text-align: left;
+}
+
+.reg {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-logo img {
+    width: 150px; 
+    height: 110px; 
+}
+
+.reg a {
+    color: white;
+    transition: color 0.3s ease; 
+}
+
+.reg a:hover {
+    color: blue; 
+}
+
+        h1 {
+            text-align: center;
+            color: #333;
+            text-decoration: underline;
+            margin-top: 50px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+            margin-bottom: -1000px;
+
+        }
+        .reg {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			background-color: black;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+
+		.navbar-logo img {
+			width: 150px; 
+			height: 110px; 
+		}
+
+		.reg a {
+			color: white;
+			transition: color 0.3s ease; 
+		}
+
+		.reg a:hover {
+			color: blue; 
+		}
+
+		h2:hover {
+			color: navy; 
+		}
+
+		h3 {
+			text-align: left;
+		}
+
+        .footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            bottom: 0px;
+            width: 100%;
+        }
+
+		#comp {
+			text-align: center;
+			color:dodgerblue;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			font-size: 80px;
+			transition: color 0.3s ease; 
+           }
+
+#comp:hover {
+    color: royalblue; 
+}
+#thankYouMessage {
+        display: none;
+        font-size: 100px;
+        color:rgb(108, 238, 199);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif   ;
+        padding-top: 40px;
+    }
+    #thankYouMessage a {
+        color:dodgerblue;
+        text-decoration: none;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif   ;
+    }
+    #thankYouMessage a:hover {
+        color:cadetblue;
+    }
+    </style>
+    <script>
+        function validateForm() {
+            var firstname = document.getElementById('firstname').value;
+            var lastname = document.getElementById('lastname').value;
+            var age = document.getElementById('age').value;
+            var email = document.getElementById('email').value;
+    
+            if (firstname.trim() === '') {
+                alert('First name is required.');
+                return false;
+            }
+            if (lastname.trim() === '') {
+                alert('Last name is required.');
+                return false;
+            }
+            if (age <= 0) {
+                alert('Please enter a valid age.');
+                return false;
+            }
+            if (email.trim() === '') {
+                alert('Email is required.');
+                return false;
+            }
+            if (confirm('Do you really want to submit the form?')) {
+                var form = document.getElementById('form1');
+                var thankYouMessage = document.getElementById('thankYouMessage');
+                form.style.display = 'none';
+                thankYouMessage.innerHTML = 'Thank you for your registration! <br><a href="about.html">Go to homepage</a>';
+                thankYouMessage.style.display = 'block';
+                thankYouMessage.style.textAlign = 'center';
+                thankYouMessage.style.fontSize = '3rem';
+    
+                return false;
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class = "reg">
+        <h1 id = "comp" style="text-decoration: none;">Autodoc ENT</h1>
+        <big><a style="text-decoration: none" href= "/PPS2.html" target = "_main"><h3 id = "abc">Home</h3></a></big>
+        <big><a style="text-decoration: none" href = "/about.html" target = "_main"><h3 id = "abc">About</h3></a></big>
+        <div class="navbar-logo">
+            <img src="logwat.jpg" alt="Logo">
+        </div>
+        <big><a style="text-decoration: none" href = "/feedback.html" target = "_main"><h3 id = "abc">Feedback</h3></a></big>
+        <big><a style="text-decoration: none" href = "/LoginREG.html" target = "_main"><h3 id = "abc">Register Now</h3></a></big>
+
+    </div>
+    <br>
+    <h1 style="text-decoration: none; font-size: 3rem; color:rgb(5, 56, 84); font-family:Verdana, Geneva, Tahoma, sans-serif;"> Registration</h1>
+<form id="form1" onsubmit="return validateForm();">
+    <label for="firstname">First name:</label>
+    <input type="text" id="firstname" name="firstname" required>
+
+    <label for="lastname">Last name:</label>
+    <input type="text" id="lastname" name="lastname" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="email">Email ID:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="experience">Years of Experience in Automotive Field:</label>
+    <br>
+    <input type="radio" id="novice" name="experience" value="novice">
+    <label for="novice">Novice</label>
+    <br>
+    <input type="radio" id="intermediate" name="experience" value="intermediate">
+    <label for="intermediate">Intermediate</label>
+    <br>
+    <input type="radio" id="expert" name="experience" value="expert">
+    <label for="expert">Expert</label>
+    <br><br>
+
+    <label for="interests">Select your areas of interest:</label>
+    <br>
+    <input type="checkbox" id="engines" name="interests" value="engines">
+    <label for="engines">Engines</label>
+    <br>
+    <input type="checkbox" id="transmissions" name="interests" value="transmissions">
+    <label for="transmissions">Transmissions</label>
+    <br>
+    <input type="checkbox" id="electronics" name="interests" value="electronics">
+    <label for="electronics">Electronics</label>
+    <br>
+    <input type="checkbox" id="suspensions" name="interests" value="suspensions">
+    <label for="suspensions">Suspensions</label>
+    <br><br>
+
+    <label for="city">Select your City:</label>
+    <select id="city" name="city">
+        <option value="Detroit">Detroit</option>
+        <option value="Munich">Munich</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Seoul">Seoul</option>
+        <option value="Turin">Turin</option>
+        <option value="Stuttgart">Stuttgart</option>
+        <option value="Wolfsburg">Wolfsburg</option>
+    </select>
+    <br><br>
+
+    <label for="username">Enter a Username*:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+
+    <label for="password">Enter a Password*:</label>
+    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <br><br>
+
+    <label for="confirmpassword">Confirm Password*:</label>
+    <input type="password" id="confirmpassword" name="confirmpassword" required>
+    <br><br>
+
+    <div id="message">
+        <h3>*Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+    <br><br>
+
+    <button type="submit">Register</button>
+</form>
+    <br><br>
+    <div id="thankYouMessage" style=" display: none; height:200px; background-color: bisque;"></div>  
+    <div class="footer">
+        <pre>© Autodoc  |  Designed by Archit Kumar</pre>
+    </div>
+</body>
+</html>

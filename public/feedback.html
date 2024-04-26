@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback Form</title>
+	<style>
+		body {
+			height:100vh;
+            margin: 0px;
+			padding:0;
+			background-image: url("background3.jpg") ;
+			background-size:cover;
+			background-repeat: no-repeat;
+            background-attachment: fixed;
+			font-family: Arial, sans-serif;
+			position: relative;
+		}
+		form {
+			background-color: #fff;
+			border-radius: 5px;
+			padding: 20px;
+			width: 500px;
+			margin: 0 auto;
+
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+		label {
+			display: block;
+			margin-top: 10px;
+			color: #333;
+		}
+		input[type=text], textarea {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			resize: vertical;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		.container {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 10px;
+			margin-top: 20px;
+		}
+		.error {
+			color: red;
+			font-size: 12px;
+			margin-top: 5px;
+		}
+		
+
+		h2 {
+    		text-align: center;
+    		font-family: Georgia, 'Times New Roman', Times, serif;
+    		font-size: 50px;
+    		transition: color 0.3s ease; 
+		}
+
+		.reg {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			background-color: black;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+
+		.navbar-logo img {
+			width: 150px; 
+			height: 110px; 
+		}
+
+		.reg a {
+			color: white;
+			transition: color 0.3s ease; 
+		}
+
+		.reg a:hover {
+			color: blue; 
+		}
+
+		h2:hover {
+			color: navy; 
+		}
+
+		h3 {
+			text-align: left;
+		}
+
+        .footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            bottom: 0px;
+            width: 100%;
+
+        }
+
+		#comp {
+			text-align: center;
+			color:dodgerblue;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			font-size: 80px;
+			transition: color 0.3s ease; 
+           }
+
+        #comp:hover {
+    color: royalblue; 
+        }
+		#thankYouMessage {
+        display: none;
+        font-size: 100px;
+        color:rgb(108, 238, 199);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif   ;
+    }
+    #thankYouMessage a {
+        color:dodgerblue;
+        text-decoration: none;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif   ;
+    }
+    #thankYouMessage a:hover {
+        color:cadetblue;
+    }
+
+	</style>
+	<script>
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var feedback = document.getElementById('feedback').value;
+
+            if (!name.trim()) {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!feedback.trim()) {
+                alert("Please enter your feedback.");
+                return false;
+            }
+
+            if (confirm("Are you sure you want to submit your feedback?")) {
+                var form = document.getElementById('form1');
+                var thankYouMessage = document.getElementById('thankYouMessage');
+                form.style.display = 'none';
+                thankYouMessage.innerHTML = 'Thank you for your valuable feedback <br><a href="about.html">Go to homepage</a>';
+                thankYouMessage.style.display = 'block';
+                thankYouMessage.style.textAlign = 'center';
+                thankYouMessage.style.fontSize = '3rem';
+    
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+	<div class = "reg">
+        <h1 id="comp">Autodoc ENT</h1>
+        <big><a style="text-decoration: none" href= "/PPS2.html" target = "_main"><h3 id = "abc">Home</h3></a></big>
+        <big><a style="text-decoration: none" href = "/about.html" target = "_main"><h3 id = "abc">About</h3></a></big>
+        <div class="navbar-logo">
+            <img src="logwat.jpg" alt="Logo">
+        </div>
+        <big><a style="text-decoration: none" href = "/feedback.html" target = "_main"><h3 id = "abc">Feedback</h3></a></big>
+        <big><a style="text-decoration: none" href = "/LoginREG.html" target = "_main"><h3 id = "abc">Register Now</h3></a></big>
+
+    </div>
+    <br>
+	<h1>Feedback Form</h1>
+	<form id="form1" onsubmit="return validateForm();">
+		<label for="name">Name</label>
+		<input type="text" id="name" name="name" placeholder="Your name.." required>
+
+		<label for="email">Email</label>
+		<input type="text" id="email" name="email" placeholder="Your email.." required>
+
+		<label for="feedback">Feedback</label>
+		<textarea id="feedback" name="feedback" placeholder="Write something.." style="height:200px" required></textarea>
+
+		<input type="submit" value="Submit">
+	</form>	
+	<div id="thankYouMessage" style="margin-bottom: 400px;"></div>
+	<br><br>
+	<div class="footer">
+        <pre>© Autodoc  |  Designed by Archit Kumar</pre>
+    </div>
+
+</body>
+</html>

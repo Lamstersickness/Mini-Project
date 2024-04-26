@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding:0;
+}
+.reg {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-logo img {
+  width: 150px; 
+  height: 110px; 
+}
+
+.reg a {
+  color: white;
+  transition: color 0.3s ease; 
+  text-decoration: none;
+}
+
+.reg a:hover {
+  color: blue; 
+}
+h3 {
+  text-align: left;
+  font-size: 25px;
+}
+h1 {
+  text-align: center;
+  color:dodgerblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 80px;
+  transition: color 0.3s ease; 
+}
+h1:hover {
+  color: royalblue; 
+}
+#comp {
+  text-align: center;
+  color:dodgerblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 80px;
+  transition: color 0.3s ease; 
+       }
+
+#comp:hover {
+color: royalblue; 
+}

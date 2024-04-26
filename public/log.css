@@ -1,0 +1,145 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding:0;
+    background-image: url("gears.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1 {
+    text-align: center;
+    color:dodgerblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    transition: color 0.3s ease; 
+}
+
+h1:hover {
+    color: royalblue; 
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 25%;
+    height: 60vh;
+    margin: 150px auto 150px auto; 
+    border-radius: 20px;
+}
+
+.head {
+    transition: color 0.3s ease; 
+}
+
+.head:hover {
+    color: blue; 
+}
+
+#first {
+    text-align: center;
+    margin-bottom: 80px;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: rgb(25, 105, 217);
+}
+
+.tag {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.input {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 50px;
+    width: 20vw;
+    text-align: justify;
+    font-size: 20px;
+    border-color:beige;
+    border-radius: 15px;
+
+}
+#button {
+    text-decoration: none;
+    height: 50px;
+    width: 20vw;
+    margin-top: 20px;
+    border-radius: 15px;
+    border-color:cornflowerblue ;
+    background-color: blue;
+    color: white;
+    transition: background-color 0.3s ease; 
+}
+
+#button:hover {
+    background-color: rgb(71, 71, 227); 
+}
+
+h2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    transition: color 0.3s ease; 
+}
+
+h2:hover {
+    color: navy; 
+}
+
+h3 {
+    text-align: left;
+}
+
+.reg {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-logo img {
+    width: 150px; 
+    height: 110px; 
+}
+
+.reg a {
+    color: white;
+    transition: color 0.3s ease; 
+}
+
+.reg a:hover {
+    color: blue; 
+}
+
+p {
+    margin-left: 10px;
+    margin-right: 20px;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(4, 68, 80);
+    animation: fadeIn 1s ease; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
